@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root{
+  --orange:#ff8a0a;
+  --orange2:#ffad43;
+  --dark:#170601;
+  --panel:rgba(31,8,1,.91);
+  --panel2:rgba(52,15,2,.93);
+  --line:#a44206;
+  --text:#fff1df;
+  --muted:#d59b68;
+}
+*{box-sizing:border-box}
+
+html{
+  min-height:100%;
+  background:#2b0d02;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    linear-gradient(to bottom, rgba(29,8,1,.70) 0, rgba(29,8,1,.32) 250px, rgba(0,0,0,.06) 520px),
+    url("brick-wall.png") center top / 100% auto repeat-y;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(255,121,0,.24), transparent 35rem),
+    linear-gradient(to bottom, rgba(0,0,0,.06), rgba(0,0,0,.26));
+  z-index:0;
+}
+
+.page{
+  position:relative;
+  z-index:1;
+  width:min(760px,calc(100% - 24px));
+  margin:0 auto;
+  padding:18px 0 36px;
+}
+
+.hero{
+  min-height:230px;
+  display:grid;
+  grid-template-columns:235px minmax(0,1fr);
+  align-items:center;
+  gap:34px;
+  padding:22px 30px;
+  border:2px solid #8c3304;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 10% 30%, rgba(255,116,0,.13), transparent 18rem),
+    linear-gradient(180deg, rgba(54,16,2,.96), rgba(25,7,1,.94));
+  box-shadow:
+    0 16px 38px rgba(0,0,0,.48),
+    inset 0 0 25px rgba(255,117,0,.06);
+  overflow:hidden;
+}
+
+
+
+
+.avatar-frame{
+  width:235px;
+  height:196px;
+  padding:7px;
+  border-radius:20px;
+  background:
+    linear-gradient(135deg,#ff9a18,#8f3003 36%,#ff7b05 68%,#5c1a01);
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.48),
+    0 0 0 2px rgba(255,149,24,.14),
+    inset 0 0 0 1px rgba(255,199,91,.45);
+  position:relative;
+}
+
+.avatar-frame::before,
+.avatar-frame::after{
+  content:"";
+  position:absolute;
+  width:14px;
+  height:14px;
+  background:#ff8a0a;
+  border:2px solid #5d1b01;
+  border-radius:4px;
+  box-shadow:0 2px 0 rgba(0,0,0,.35);
+}
+
+.avatar-frame::before{
+  left:-5px;
+  top:-5px;
+  transform:rotate(-8deg);
+}
+
+.avatar-frame::after{
+  right:-5px;
+  bottom:-5px;
+  transform:rotate(9deg);
+}
+
+.avatar-inner{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  border-radius:14px;
+  background:#6f4328;
+  border:2px solid #2c0a01;
+  box-shadow:inset 0 0 20px rgba(0,0,0,.18);
+}
+
+.avatar-inner img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+
+.eyebrow{
+  font-family:"Russo One",sans-serif;
+  font-size:13px;
+  letter-spacing:2px;
+  color:var(--orange2);
+}
+
+h1{
+  margin:8px 0 0;
+  font-family:"Russo One",sans-serif;
+  font-size:clamp(38px,5.4vw,58px);
+  line-height:.95;
+  text-shadow:0 4px 0 rgba(61,16,1,.9);
+}
+h1 span{color:var(--orange)}
+
+.brand{min-width:0;padding-right:6px}
+
+.brand p{
+  margin:14px 0 0;
+  color:var(--muted);
+  font-size:15px;
+}
+
+.links{
+  display:grid;
+  gap:12px;
+  margin-top:16px;
+}
+
+.card{
+  min-height:82px;
+  display:grid;
+  grid-template-columns:56px 1fr 34px;
+  align-items:center;
+  gap:14px;
+  padding:12px 16px;
+  color:var(--text);
+  text-decoration:none;
+  border:2px solid #7f2b03;
+  border-radius:18px;
+  background:
+    linear-gradient(180deg, rgba(55,15,2,.94), rgba(25,7,1,.94));
+  box-shadow:
+    0 9px 24px rgba(0,0,0,.38),
+    inset 0 0 17px rgba(255,116,0,.045);
+  transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+  border-color:#d05c09;
+  box-shadow:0 12px 28px rgba(0,0,0,.44),0 0 22px rgba(255,111,0,.10);
+}
+
+.icon{
+  width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:#150601;
+  border:1px solid #843003;
+  color:var(--orange2);
+  font-family:"Russo One",sans-serif;
+  font-size:20px;
+}
+
+.title{
+  font-family:"Russo One",sans-serif;
+  font-size:18px;
+}
+
+.sub{
+  margin-top:5px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.go{
+  text-align:right;
+  color:var(--orange2);
+  font-size:29px;
+}
+
+.qr-note{
+  margin-top:16px;
+  padding:17px 18px;
+  border:2px dashed #9d3a04;
+  border-radius:18px;
+  background:rgba(22,6,1,.89);
+  box-shadow:0 7px 20px rgba(0,0,0,.28);
+}
+
+.qr-title{
+  font-family:"Russo One",sans-serif;
+  color:var(--orange2);
+  font-size:15px;
+}
+
+.qr-text{
+  margin-top:7px;
+  color:#c98d5d;
+  line-height:1.4;
+  font-size:13px;
+}
+
+footer{
+  margin-top:23px;
+  text-align:center;
+  color:#aa724c;
+  font-size:12px;
+  text-shadow:0 1px 4px #000;
+}
+
+@media(max-width:640px){
+  body{
+    background-size:auto 1000px;
+    background-position:center top;
+  }
+
+  .page{
+    width:min(100% - 16px,540px);
+    padding-top:8px;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:10px;
+    padding:16px 14px 20px;
+  }
+
+
+
+
+  .avatar-frame{
+    width:220px;
+    height:183px;
+    margin:0 auto 7px;
+  }
+
+  .eyebrow{font-size:11px}
+
+  .card{
+    min-height:74px;
+    grid-template-columns:48px 1fr 26px;
+    padding:10px 13px;
+  }
+
+  .icon{
+    width:48px;
+    height:48px;
+    font-size:18px;
+  }
+
+  .title{font-size:16px}
+  .sub{font-size:12px}
+}
