@@ -210,28 +210,6 @@ h1 span{color:var(--orange)}
   font-size:29px;
 }
 
-.qr-note{
-  margin-top:16px;
-  padding:17px 18px;
-  border:2px dashed #9d3a04;
-  border-radius:18px;
-  background:rgba(22,6,1,.89);
-  box-shadow:0 7px 20px rgba(0,0,0,.28);
-}
-
-.qr-title{
-  font-family:"Russo One",sans-serif;
-  color:var(--orange2);
-  font-size:15px;
-}
-
-.qr-text{
-  margin-top:7px;
-  color:#c98d5d;
-  line-height:1.4;
-  font-size:13px;
-}
-
 footer{
   margin-top:23px;
   text-align:center;
