@@ -7,7 +7,7 @@ const links = [
   },
   {
     title: "Telegram",
-    subtitle: "Канал — новости и анонсы",
+    subtitle: "Новости,Анонсы стримов",
     icon: "TG",
     url: "https://t.me/kirpichkrisa"
   },
@@ -18,8 +18,14 @@ const links = [
     url: "https://t.me/+bdpeQNo7bZc4Mzdi"
   },
   {
+    title: "Мой Telegram",
+    subtitle: "Для связи",
+    icon: "TG",
+    url: "https://t.me/FoundYouJ"
+  },
+  {
     title: "TikTok",
-    subtitle: "Ролики и стримы",
+    subtitle: "Мой TikTok",
     icon: "TT",
     url: "https://www.tiktok.com/@kirpichkrisa"
   },
