@@ -1,4 +1,4 @@
-<!doctype html>
+doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -7,99 +7,7 @@
 <title>Кирпич Крыса — все ссылки</title>
 <meta name="description" content="Все ссылки Кирпич Крысы: Telegram, чат, TikTok, Twitch, YouTube и DonationAlerts.">
 <link rel="stylesheet" href="style.css">
-
-<style>
-  .hero{position:relative}
-
-  .secret-trigger{
-    position:absolute;
-    z-index:20;
-    width:72px;
-    height:64px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:1px;
-    padding:0;
-    border:2px solid #a44206;
-    border-radius:17px;
-    color:#ffad43;
-    background:linear-gradient(180deg,rgba(55,15,2,.97),rgba(20,5,1,.98));
-    box-shadow:0 9px 24px rgba(0,0,0,.43),inset 0 0 16px rgba(255,116,0,.05);
-    cursor:pointer;
-    -webkit-tap-highlight-color:transparent;
-    transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;
-  }
-
-  .secret-trigger:hover{
-    transform:translateY(-2px);
-    border-color:#d05c09;
-    box-shadow:0 12px 28px rgba(0,0,0,.48),0 0 20px rgba(255,111,0,.12);
-  }
-
-  .secret-trigger:active{transform:scale(.96)}
-  .secret-heart{font-size:26px;line-height:1}
-  .secret-arrow{font:30px/1 Arial,sans-serif;color:#ffad43}
-
-  /* ПК: маленькая кнопка в правом верхнем углу карточки */
-  @media(min-width:641px){
-    .secret-trigger{
-      top:18px;
-      right:18px;
-    }
-    .brand{padding-right:88px}
-  }
-
-  /* Телефон: справа от аватарки — в том месте, которое ты отметил */
-  @media(max-width:640px){
-    .secret-trigger{
-      top:72px;
-      right:12px;
-      width:66px;
-      height:62px;
-      border-radius:16px;
-    }
-    .secret-heart{font-size:24px}
-    .secret-arrow{font-size:29px}
-  }
-
-  @media(max-width:380px){
-    .secret-trigger{
-      right:8px;
-      width:58px;
-      height:58px;
-    }
-    .secret-heart{font-size:21px}
-    .secret-arrow{font-size:26px}
-  }
-
-  .secret-heading{
-    text-align:center;
-    padding:7px 4px 3px;
-  }
-  .secret-kicker{
-    font-family:"Russo One",sans-serif;
-    font-size:12px;
-    letter-spacing:2px;
-    color:#ffad43;
-  }
-  .secret-caption{
-    margin-top:6px;
-    color:#d59b68;
-    font-size:14px;
-  }
-  .secret-back{
-    width:100%;
-    font:inherit;
-    text-align:left;
-    cursor:pointer;
-  }
-  .secret-site-card .icon{
-    color:#ff8aa7;
-    font-size:27px;
-  }
-</style>
-
+<link rel="stylesheet" href="secret.css?v=1">
 </head>
 <body>
   <div class="top-glow"></div>
@@ -117,12 +25,6 @@
         <h1>КИРПИЧ <span>КРЫСА</span></h1>
         <p>Стримы, соцсети, чат и поддержка.</p>
       </div>
-
-      <button class="secret-trigger" id="secretTrigger" type="button"
-              aria-label="Секретная ссылка" aria-expanded="false">
-        <span class="secret-heart">💗</span>
-        <span class="secret-arrow">›</span>
-      </button>
     </section>
 
     <section class="links" id="links"></section>
@@ -130,66 +32,6 @@
   </main>
 
 <script src="script.js?v=3"></script>
-<script>
-  // Актуальная подпись первой кнопки, не трогая основной script.js со всеми ссылками.
-  const murmanskTitle = document.querySelector("#links .card .title");
-  if (murmanskTitle && murmanskTitle.textContent.includes("Чат для Мурманчан")) {
-    murmanskTitle.textContent = "Чат для Мурманчан (Организация праздника)";
-  }
-</script>
-
-<script>
-(() => {
-  const trigger = document.getElementById("secretTrigger");
-  const linksBox = document.getElementById("links");
-  if (!trigger || !linksBox) return;
-
-  // script.js загружается строкой выше и уже успевает создать обычные кнопки.
-  const normalLinksMarkup = linksBox.innerHTML;
-
-  function showSecret() {
-    linksBox.innerHTML = `
-      <div class="secret-heading">
-        <div class="secret-kicker">СЕКРЕТНАЯ ССЫЛКА</div>
-        <div class="secret-caption">Ты нашёл сердечко 💗</div>
-      </div>
-
-      <a class="card secret-site-card"
-         href="https://fellowkjhj.github.io/KirpichKrisaVideo/"
-         target="_blank" rel="noopener noreferrer">
-        <div class="icon">♡</div>
-        <div>
-          <div class="title">Немного обо мне 💗</div>
-          <div class="sub">Видео и маленький анонимный опрос</div>
-        </div>
-        <div class="go">›</div>
-      </a>
-
-      <button class="card secret-back" id="secretBack" type="button">
-        <div class="icon">←</div>
-        <div>
-          <div class="title">Назад</div>
-          <div class="sub">Вернуться ко всем ссылкам</div>
-        </div>
-        <div class="go">‹</div>
-      </button>
-    `;
-    trigger.setAttribute("aria-expanded", "true");
-    document.getElementById("secretBack").addEventListener("click", showNormal);
-    linksBox.scrollIntoView({behavior:"smooth", block:"start"});
-  }
-
-  function showNormal() {
-    linksBox.innerHTML = normalLinksMarkup;
-    trigger.setAttribute("aria-expanded", "false");
-  }
-
-  trigger.addEventListener("click", () => {
-    if (trigger.getAttribute("aria-expanded") === "true") showNormal();
-    else showSecret();
-  });
-})();
-</script>
-
+<script src="secret.js?v=1"></script>
 </body>
 </html>
