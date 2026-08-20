@@ -1,13 +1,7 @@
 const links = [
   {
-    title: "Чат для Мурманчан (общение и организация)",
-    subtitle: "Telegram-чат",
-    icon: "💬",
-    url: "https://t.me/+IaDeJPCHFYA5ZGYy"
-  },
-  {
     title: "Telegram",
-    subtitle: "Новости,Анонсы стримов",
+    subtitle: "Канал — новости и анонсы",
     icon: "TG",
     url: "https://t.me/kirpichkrisa"
   },
@@ -18,14 +12,8 @@ const links = [
     url: "https://t.me/+bdpeQNo7bZc4Mzdi"
   },
   {
-    title: "Мой Telegram",
-    subtitle: "Для связи",
-    icon: "TG",
-    url: "https://t.me/FoundYouJ"
-  },
-  {
     title: "TikTok",
-    subtitle: "Мой TikTok",
+    subtitle: "Ролики и стримы",
     icon: "TT",
     url: "https://www.tiktok.com/@kirpichkrisa"
   },
