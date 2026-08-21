@@ -1,5 +1,11 @@
 const links = [
   {
+    title: "Чат для Мурманчан (Организация праздника)",
+    subtitle: "Telegram-чат",
+    icon: "💬",
+    url: "https://t.me/+IaDeJPCHFYA5ZGYy"
+  },
+  {
     title: "Telegram",
     subtitle: "Канал — новости и анонсы",
     icon: "TG",
