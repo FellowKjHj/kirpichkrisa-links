@@ -18,6 +18,12 @@ const links = [
     url: "https://www.tiktok.com/@kirpichkrisa"
   },
   {
+    title: "TikTok (резервный)",
+    subtitle: "Запасной аккаунт",
+    icon: "TT",
+    url: "https://www.tiktok.com/@kirpichkrisareserve"
+  },
+  {
     title: "Twitch",
     subtitle: "Стримы",
     icon: "TW",
